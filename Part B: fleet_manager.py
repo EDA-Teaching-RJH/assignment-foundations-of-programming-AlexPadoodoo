@@ -74,7 +74,7 @@ def update_rank(names, ranks, ids):
         ranks[idx] = new_rank
         print("Rank updated!")
     else:
-        print("ErrorL ID was not found")
+        print("Error: ID was not found")
 
 
 
