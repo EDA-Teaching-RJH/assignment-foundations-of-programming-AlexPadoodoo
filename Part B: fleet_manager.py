@@ -56,3 +56,14 @@ def remove_member(names, ranks, divs, ids):
         print("Member removed from all systems")
     else:
         print("Error: ID was not found")
+
+def update_rank(names, ranks, ids):
+    upd_id = input("Enter ID to update rank: ")
+    if upd_id in ids:
+        idx = ids.index(upd_id)
+        new_rank = input("Enter new rank for " + names[idx] + ":")
+        ranks[idx] = new_rank
+        print("Rank updated!")
+    else:
+        print("ErrorL ID was not found")
+
