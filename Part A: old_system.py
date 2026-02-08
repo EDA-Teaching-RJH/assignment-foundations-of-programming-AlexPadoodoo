@@ -39,7 +39,7 @@ def run_system_monolith():
            
             n.append(new_name)
             r.append(new_rank) #Keeps the data in sync
-            r.append(mew_div)
+            r.append(new_div)
             print("Crew member added.")
             
         elif opt == "3":
@@ -51,6 +51,8 @@ def run_system_monolith():
                 r.pop(idx)
                 d.pop(idx)
                 print("Removed.")
+            else:   #Added an else function to stop the code crashing
+                print("Name not found")
             
         elif opt == "4":
             print("Analyzing...")
