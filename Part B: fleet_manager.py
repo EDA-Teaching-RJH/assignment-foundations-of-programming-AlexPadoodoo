@@ -1,3 +1,4 @@
+#Function 1:
 def init_database():
     names = ["Jean Picard", "William Riker", "Worf", "Deanna Troi", "Geordi La Froge"] #5 Star trek character
     ranks = ["Capitain", "Commander", "Lt. Commander", "Lieutenant", "Commander"]
@@ -5,7 +6,7 @@ def init_database():
     ids = ["NCC-1701-01", "NCC-1701-02", "NCC-1701-03", "NCC-1701-04", "NCC-1701-05"]
     return names, ranks, divs, ids
 
-
+#Function 2:
 def display_menu(user_name):
     print("\n" + "="*30)
     print("FLEET MANAGEMENT SYSTEM")
@@ -25,12 +26,16 @@ def display_menu(user_name):
     choice = input("\n Select an option (1-9): ")
     return choice
 
+
+#Function 3:
 def add_member(names, ranks, divs, ids):
+    #Validates ID is unique
     valid_ranks = ["Capitan", "Commander", "Lt. Commander", "Lieutendant", "Lt. Junior Grade", "Ensign"]
     new_id = input("Enter unique ID: ")
     if new_id in ids:
         print("Error: ID already exists")
         return
+    # Validates rank is a valid TGN rank
     new_rank = input("Enter Rank: ")
     if new_rank not in valid_ranks:
         print("Error: Invalid TNG rank")
@@ -38,18 +43,21 @@ def add_member(names, ranks, divs, ids):
     
     new_name = input("Enter Name: ")
     new_div = input("Enter Division: (Command, Operations, Sciences, Engineering, Security): ")
-
+#Appends Data to all 4 lists
     names.append(new_name)
     ranks.append(new_rank)
     divs.append(new_div)
     ids.append(new_id)
     print("**Member added successfully**")
 
+
+#Function 4:
 def remove_member(names, ranks, divs, ids):
-    rem_id = input("Enter ID of member to remove: ")
-    if rem_id in ids:
+    rem_id = input("Enter ID of member to remove: ") #Asks user for ID
+    if rem_id in ids:  #Finds the Index
         idx = ids.index(rem_id)
-        names.pop(idx)
+        #Removes entry from all 4 lists to keep them in sync
+        names.pop(idx)  
         ranks.pop(idx)
         divs.pop(idx)
         ids.pop(idx)
@@ -57,13 +65,13 @@ def remove_member(names, ranks, divs, ids):
     else:
         print("Error: ID was not found")
 
+#Function 5:
 def update_rank(names, ranks, ids):
     upd_id = input("Enter ID to update rank: ")
-    if upd_id in ids:
-        idx = ids.index(upd_id)
+    if upd_id in ids:      #Finds a member by ID
+        idx = ids.index(upd_id)   #Updates their rank string
         new_rank = input("Enter new rank for " + names[idx] + ":")
         ranks[idx] = new_rank
         print("Rank updated!")
     else:
         print("ErrorL ID was not found")
-
