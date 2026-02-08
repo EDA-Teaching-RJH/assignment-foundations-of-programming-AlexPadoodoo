@@ -28,7 +28,7 @@ def run_system_monolith():
         if opt == "1":  #Syntax Error, should be double equals sign
             print("Current Crew List:")
             
-            for i in range(10):
+            for i in range(len(n)): #Index error: loops until it reaches 10, so the code crashes once it reaches 4
                 print(n[i] + " - " + r[i]) 
                 
         elif opt == "2":
