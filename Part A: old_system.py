@@ -38,6 +38,8 @@ def run_system_monolith():
             
            
             n.append(new_name)
+            r.append(new_rank) #Keeps the data in sync
+            r.append(mew_div)
             print("Crew member added.")
             
         elif opt == "3":
@@ -54,9 +56,9 @@ def run_system_monolith():
             count = 0
             
             for rank in r:
-                if rank == "Captain" or "Commander": 
+                if rank == "Captain" or rank == "Commander": #Corrected logical comparison
                     count = count + 1
-            print("High ranking officers: " + count) 
+            print("High ranking officers: " + str(count)) #Cast count to string to avoid TypeError
             
         elif opt == "5":
             print("Shutting down.")
