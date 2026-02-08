@@ -13,7 +13,7 @@ def run_system_monolith():
     loading = 0
     while loading < 5:  #Infinite loop: The loop does not increment the "Loading" variable, so "loading module" will continue forever
         print("Loading module " + str(loading))
-        break
+        loading +=1 #Bug 1 fix: The loop will no longer be infinite
     
     while True:
         print("\n--- MENU ---")
