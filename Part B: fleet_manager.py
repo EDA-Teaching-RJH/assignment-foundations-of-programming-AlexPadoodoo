@@ -75,3 +75,10 @@ def update_rank(names, ranks, ids):
         print("Rank updated!")
     else:
         print("ErrorL ID was not found")
+
+
+
+#Function 6:
+
+def display_roster(names, ranks, divs, ids):
+    #iterates through the lists
