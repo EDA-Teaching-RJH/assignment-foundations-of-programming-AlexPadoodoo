@@ -45,3 +45,14 @@ def add_member(names, ranks, divs, ids):
     ids.append(new_id)
     print("**Member added successfully**")
 
+def remove_member(names, ranks, divs, ids):
+    rem_id = input("Enter ID of member to remove: ")
+    if rem_id in ids:
+        idx = ids.index(rem_id)
+        names.pop(idx)
+        ranks.pop(idx)
+        divs.pop(idx)
+        ids.pop(idx)
+        print("Member removed from all systems")
+    else:
+        print("Error: ID was not found")
