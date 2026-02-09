@@ -106,3 +106,15 @@ def filter_by_division(names,divs):
 
 #Function 9:
 def calculate_payroll(ranks):
+    credit_value = 0
+    if rank == "Captain":
+        credit_value += 1000
+    elif rank == "Commander":
+        credit_value += 750
+    elif rank == "Lt. Commander":
+        credit_value += 650
+    elif rank == "Lieutenant":
+        credit_value += 500
+    else:
+        credit_value += 250
+    return credit_value
