@@ -82,3 +82,14 @@ def update_rank(names, ranks, ids):
 
 def display_roster(names, ranks, divs, ids):
     #iterates through the lists
+
+
+
+
+
+#Function 7:
+def search_crew(names,ranks,divs,ids):
+    term = input("Enter name to search for: ").lower()
+    for i in range(len(names)):
+        if term in names[i].lower():
+            print(f"Match for: {names[i]}, {ranks[i]}, {divs[i]}, {ids[i]}")
