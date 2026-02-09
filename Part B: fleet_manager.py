@@ -96,9 +96,13 @@ def search_crew(names,ranks,divs,ids):
 
 
 #Function 8:
-def filter_by_division(names,ranks,divs,ids):
+def filter_by_division(names,divs):
     division = input("Enter division to filter (Command, Operations, Sciences): ")
     print(f"Crew in {div_choice}: ")
     for i in range(len(names)):
         if divs[i] == division:
             print(f"{names[i]}")
+
+
+#Function 9:
+def calculate_payroll(ranks):
