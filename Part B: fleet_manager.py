@@ -118,3 +118,12 @@ def calculate_payroll(ranks):
     else:
         credit_value += 250
     return credit_value
+
+
+#Function 10:
+def count_officers(ranks):
+    count = 0
+    for rank in ranks:
+        if rank == "Captain" or rank == "Commander":
+            count +=1
+    return count
