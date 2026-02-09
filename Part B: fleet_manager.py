@@ -81,7 +81,7 @@ def update_rank(names, ranks, ids):
 #Function 6:
 
 def display_roster(names, ranks, divs, ids):
-    for i in range (len(Names)):
+    for i in range (len(names)):
         print(names[i] + "," + ranks[i] + "," + divs[i] + "," + ids[i])
 
 
@@ -100,7 +100,7 @@ def search_crew(names,ranks,divs,ids):
 #Function 8:
 def filter_by_division(names,divs):
     division = input("Enter division to filter (Command, Operations, Sciences): ")
-    print(f"Crew in {div_choice}: ")
+    print(f"Crew in {division}: ")
     for i in range(len(names)):
         if divs[i] == division:
             print(f"{names[i]}")
@@ -109,13 +109,13 @@ def filter_by_division(names,divs):
 #Function 9:
 def calculate_payroll(ranks):
     credit_value = 0
-    if rank == "Captain":
+    if ranks == "Captain":
         credit_value += 1000
-    elif rank == "Commander":
+    elif ranks == "Commander":
         credit_value += 750
-    elif rank == "Lt. Commander":
+    elif ranks == "Lt. Commander":
         credit_value += 650
-    elif rank == "Lieutenant":
+    elif ranks == "Lieutenant":
         credit_value += 500
     else:
         credit_value += 250
@@ -152,7 +152,7 @@ def main():
         elif choice == "5":
             search_crew(names, ranks, divs, ids)
         elif choice == "6":
-            filter_by_divison(names, divs)
+            filter_by_division(names, divs)
         elif choice == "7":
             total_cost = calculate_payroll(ranks)
             print(f"Total Crew Payroll: {total_cost}")
