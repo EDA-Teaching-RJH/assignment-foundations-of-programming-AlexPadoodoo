@@ -81,7 +81,9 @@ def update_rank(names, ranks, ids):
 #Function 6:
 
 def display_roster(names, ranks, divs, ids):
-    #iterates through the lists
+    for i in range (len(Names)):
+        print(Names[i] + "," + Ranks[i] + "," + Divs[i] + "," + ids[i])
+
 
 
 
