@@ -82,7 +82,7 @@ def update_rank(names, ranks, ids):
 
 def display_roster(names, ranks, divs, ids):
     for i in range (len(Names)):
-        print(Names[i] + "," + Ranks[i] + "," + Divs[i] + "," + ids[i])
+        print(names[i] + "," + ranks[i] + "," + divs[i] + "," + ids[i])
 
 
 
