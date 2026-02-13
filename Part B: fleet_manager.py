@@ -1,7 +1,7 @@
 #Function 1:
 def init_database():
     names = ["Jean Picard", "William Riker", "Worf", "Deanna Troi", "Geordi La Froge"] #5 Star trek character
-    ranks = ["Capitain", "Commander", "Lt. Commander", "Lieutenant", "Commander"]
+    ranks = ["Captain", "Commander", "Lt. Commander", "Lieutenant", "Commander"]
     divs = ["Command", "Operations", "Engineering", "Security", "Sciences"]
     ids = ["101", "102", "103", "104", "105"]
     return names, ranks, divs, ids
